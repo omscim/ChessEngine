@@ -1,9 +1,12 @@
 """
 Chess Main is responsible for visualizing current GameState and handling all user input
 """
+# import sys
+# sys.path.append(r'C:\Users\micha\Desktop\DS\GitHub\ChessEngine\Chess')
 
 import pygame as p
-from Chess import ChessEngine, SmartMoveFinder
+#from Chess 
+import ChessEngine, SmartMoveFinder
 from multiprocessing import Process, Queue
 
 BOARD_WIDTH = BOARD_HEIGHT = 512
