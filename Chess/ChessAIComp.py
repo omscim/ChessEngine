@@ -48,7 +48,7 @@ groupchat = autogen.GroupChat(agents=[user_proxy, tl, developer, tester], messag
 manager = autogen.GroupChatManager(groupchat=groupchat, llm_config=llm_config)
 
 task = """
-Use previous outputs as guide of how to improve the code that is stored in 3 py files which are stored in the same folder "Chess" as this ChessAIComp.py file. Perform any changes in code necessary in those 3 files.
+Improve the code that is stored in 3 py files which are stored in the same folder "Chess" as this ChessAIComp.py file. Perform any changes in code necessary in those 3 files.
 """
 
 user_proxy.initiate_chat(
