@@ -3,8 +3,8 @@ import autogen
 config_list = [
     {
        'api_type': 'open_ai', 
-       'api_base':'http://localhost:1234/v1',
-       'api_key': 'NULL'
+       'api_base':'https://q767d80451pi2f-5001.proxy.runpod.net/v1',
+       'api_key': 'sk-11111111111111111111111111111111111111111111111'
     }
 ]
 
