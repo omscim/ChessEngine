@@ -2,8 +2,9 @@ import autogen
 
 config_list = [
     {
-       'model': 'gpt-3.5-turbo-16k', 
-       'api_key': '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'
+       'api_type': 'open_ai', 
+       'api_base':'http://localhost:1234/v1',
+       'api_key': 'NULL'
     }
 ]
 
