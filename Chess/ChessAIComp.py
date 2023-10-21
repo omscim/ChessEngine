@@ -1,6 +1,6 @@
 import autogen
 
-config_list = [
+config_list_pod = [
     {
        'api_type': 'open_ai', 
        'api_base':'https://q767d80451pi2f-5001.proxy.runpod.net/v1',
@@ -8,10 +8,18 @@ config_list = [
     }
 ]
 
+config_list_lcl = [
+    {
+       'api_type': 'open_ai', 
+       'api_base':'http://localhost:1234/v1',
+       'api_key': 'NULL'
+    }
+]
+
 llm_config={
     "request_timeout": 600,
     "seed": 42, #for caching - using already used past prompt
-    "config_list": config_list,
+    "config_list": config_list_lcl,
     'temperature': 0 #between 0 and 1. lower the temp, lower the creativity of responses
 }
 
