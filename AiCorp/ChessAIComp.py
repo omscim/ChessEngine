@@ -1,4 +1,5 @@
 import autogen
+import openai
 from autogenSetup import llm_config
 
 # create / import the llm configuration object

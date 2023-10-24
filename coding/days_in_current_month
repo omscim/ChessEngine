@@ -1,6 +1,0 @@
-# filename: days_in_current_month
-import calendar
-year = int(input("Enter the current year: "))
-month = int(input("Enter the current month (1-12): "))
-days_in_month = calendar.monthrange(year, month)[1]
-print(f"There are {days_in_month} days in the current month.")
