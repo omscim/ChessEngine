@@ -1,0 +1,3 @@
+# filename: today_date
+import datetime
+print("Today's date is:", datetime.datetime.today().strftime('%Y-%m-%d'))

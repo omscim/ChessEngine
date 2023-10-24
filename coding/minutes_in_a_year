@@ -1,0 +1,5 @@
+# filename: minutes_in_a_year
+import datetime
+total_seconds = 60 * 60 * 24 * 365
+total_minutes = total_seconds / 60
+print(f"There are {total_minutes:.0f} minutes in a year.")
