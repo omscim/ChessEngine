@@ -6,7 +6,29 @@ from autogenSetup import llm_config
 llm_config = llm_config
 
 # build the function map
-function_map = {}
+from Chess.ChessEngine import GameState, Move
+function_map = {
+    "GameState.__init__": GameState.__init__,
+    "GameState.makeMove": GameState.makeMove,
+    "GameState.undoMove": GameState.undoMove,
+    "GameState.updateCastleRights": GameState.updateCastleRights,
+    "GameState.getValidMoves": GameState.getValidMoves,
+    "GameState.inCheck": GameState.inCheck,
+    "GameState.squareUnderAttack": GameState.squareUnderAttack,
+    "GameState.getAllPossibleMoves": GameState.getAllPossibleMoves,
+    "GameState.getPawnMoves": GameState.getPawnMoves,
+    "GameState.getRookMoves": GameState.getRookMoves,
+    "GameState.getKnightMoves": GameState.getKnightMoves,
+    "GameState.getBishopMoves": GameState.getBishopMoves,
+    "GameState.getQueenMoves": GameState.getQueenMoves,
+    "GameState.getKingMoves": GameState.getKingMoves,
+    "GameState.getCastleMoves": GameState.getCastleMoves,
+    "Move.__init__": Move.__init__,
+    "Move.__eq__": Move.__eq__,
+    "Move.getChessNotation": Move.getChessNotation,
+    "Move.getRankFile": Move.getRankFile,
+    "Move.__str__": Move.__str__,
+}
 
 # create our terminate msg function
 is_termination_msg = lambda x: x.get("content", "").rstrip().endswith("TERMINATE")
