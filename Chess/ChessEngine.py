@@ -190,14 +190,6 @@ class GameState():
         return moves
 
 
-    def isValidMove(self, startSq, endSq):
-        startRow, startCol = startSq
-        endRow, endCol = endSq
-        if 0 <= endRow < 8 and 0 <= endCol < 8:
-            if self.board[endRow][endCol] == '--' or self.board[endRow][endCol][0] != self.board[startRow][startCol][0]:
-                return True
-        return False
-
     '''
     Determine if the current player is in check
     '''
@@ -276,9 +268,12 @@ class GameState():
         for dr, dc in [(1, 0), (-1, 0), (0, 1), (0, -1)]:
             for i in range(1, 8):  # Check up to 7 squares in each direction
                 row, col = r + dr * i, c + dc * i
-                if self.isValidMove((r, c), (row, col)):
-                    moves.append(Move((r, c), (row, col), self.board))
-                    if self.board[row][col] != "--":
+                if 0 <= row < 8 and 0 <= col < 8:
+                    if self.board[row][col] == "--":
+                        moves.append(Move((r, c), (row, col), self.board))
+                    else:
+                        if self.board[row][col][0] == enemyCol:
+                            moves.append(Move((r, c), (row, col), self.board))
                         break  # Stop if there's any piece in the way
                 else:
                     break
