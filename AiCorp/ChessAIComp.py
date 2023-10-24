@@ -1,7 +1,4 @@
 import autogen
-import autogenSetup
-
-import autogen
 from autogenSetup import llm_config
 
 # create / import the llm configuration object
