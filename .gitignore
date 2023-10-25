@@ -1,7 +1,13 @@
 
 AiCorp/autogenSetup.py
 .aider*
-
+.cache
 .venv
+.pythonlibs
+.idea
+.gitattributes
+pyproject.toml
+poetry.lock
+__pycache__
 
 
