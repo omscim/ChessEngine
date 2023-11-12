@@ -2,6 +2,7 @@
 AiCorp/autogenSetup.py
 .aider*
 .cache
+.env
 .venv
 .pythonlibs
 .idea
